@@ -4,7 +4,7 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-color: #f0f0f0;
+  background-color: #333;
 }
 
 .container {
@@ -16,27 +16,30 @@ body {
   position: relative; /* For positioning the info button */
 }
 
-/* Styles for the input field */
-.input-and-button-container input {
-  margin: 10px 0;
-  padding: 10px;
-  border-radius: 4px;
-  border: 1px solid #ddd;
-  width: 80%;
-  
+.form-container {
+  display: grid;
+  grid-template-columns: 1fr; /* One column layout */
+  gap: 10px; /* Space between grid items */
+  width: 80%; /* Control width here for both input and button */
+  margin: 0 auto; /* Center the grid container */
 }
 
-/* Styles for the Check Password button */
+input,
+.check-button {
+  padding: 10px;
+  border-radius: 4px;
+}
+
+input {
+  border: 1px solid #ddd;
+}
+
 .check-button {
   cursor: pointer;
   background-color: #007bff;
   color: white;
   border: none;
-  margin: 10px auto; /* Center the button */
-  padding: 10px;
-  border-radius: 4px;
-  width: 80%;
-  display: block; /* Ensure the button is properly aligned */
+  margin-top: 0.5rem;
 }
 
 .check-button:hover {
@@ -45,7 +48,9 @@ body {
 
 .result-text {
   font-weight: bold;
-  font-size: 1.25rem;
+  font-size: 1rem;
+  line-height: 2;
+  line-break: loose;
 }
 
 /* Styles for the Info button */

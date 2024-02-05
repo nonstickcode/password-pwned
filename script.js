@@ -26,10 +26,10 @@ document.getElementById('checkButton').addEventListener('click', function() {
           const resultElement = document.getElementById('result');
           
           if (pwned) {
-              resultElement.textContent = "has been compromised.";
+              resultElement.textContent = "This password has been compromised.";
               resultElement.style.color = 'red';
           } else {
-              resultElement.textContent = "appears to be safe.";
+              resultElement.textContent = "This password appears to be safe.";
               resultElement.style.color = 'green';
           }
       })
