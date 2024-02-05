@@ -1,0 +1,110 @@
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f0f0f0;
+}
+
+.container {
+  text-align: center;
+  background-color: white;
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  position: relative; /* For positioning the info button */
+}
+
+/* Styles for the input field */
+.input-and-button-container input {
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+  width: 80%;
+  
+}
+
+/* Styles for the Check Password button */
+.check-button {
+  cursor: pointer;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  margin: 10px auto; /* Center the button */
+  padding: 10px;
+  border-radius: 4px;
+  width: 80%;
+  display: block; /* Ensure the button is properly aligned */
+}
+
+.check-button:hover {
+  background-color: #0056b3;
+}
+
+.result-text {
+  font-weight: bold;
+  font-size: 1.25rem;
+}
+
+/* Styles for the Info button */
+.info-button {
+  cursor: pointer;
+  background-color: #f0f0f0; /* Or any color you prefer */
+  color: #007bff; /* Icon color */
+  border: 2px solid #007bff; /* Circle around the icon */
+  font-size: 16px; /* Icon size */
+  width: 1rem; /* Adjust for circle shape */
+  height: 1rem; /* Adjust for circle shape */
+  border-radius: 50%; /* Circle shape */
+  padding: 5px;
+  display: inline-flex; /* Center the icon */
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.info-button:hover {
+  background-color: #e7e7e7;
+}
+
+/* Modal styles */
+.modal {
+  display: none;
+  position: fixed; 
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  font-size: 1.25rem;
+  line-height: 1.5;
+  overflow: auto;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}

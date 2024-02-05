@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Leak Checker</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+</head>
+<body>
+  <div class="container">
+    <h1>Password Pwned?</h1>
+    <h2>Check here</h2>
+
+    <button id="infoButton" class="info-button"><i class="fas fa-info-circle"></i></button>
+
+    <div class="input-and-button-container">
+      <input type="password" id="passwordInput" placeholder="Your Password" autofocus>
+      <button id="checkButton" class="check-button">Check Password</button>
+    </div>
+
+    <p id="result" class="result-text"></p>
+</div>
+    <!-- Modal -->
+<div id="infoModal" class="modal">
+  <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>How It Works & Security</h2>
+      <p>This tool leverages the "Have I Been Pwned" API to determine if a password has previously been exposed in data breaches. Here's how it prioritizes your privacy and security: Upon entering your password, it undergoes a hashing process right within your browser. Rather than sending the entire hash across the internet, the tool only transmits the first 5 characters of this hash to the API. This partial information is enough to receive a response from the API with hash suffixes that match those initial characters. The full hash comparison then occurs locally on your device. This method ensures that your actual password, or even its full hash, never leaves your device, thereby safeguarding your sensitive information against exposure during the check. This approach strikes an optimal balance between maintaining user privacy and utilizing public data breach information to enhance password security.</p>
+    </div>
+</div>
+
+    <script src="script.js" defer></script>
+</body>
+</html>
